@@ -9,7 +9,6 @@ const NUM_OF_SLICES: u32 = 40;
 const HALF_HEIGHT: u32 = WINDOW_HEIGHT / 2;
 const HEIGHT_SLICE: u32 = HALF_HEIGHT / NUM_OF_SLICES;
 
-
 const GRAD_R_TOP: u32 = 102;
 const GRAD_R_BOT: u32 = 0;
 
@@ -34,7 +33,7 @@ fn main() -> Result<(), String >  {
     let mut canvas = window.into_canvas().build()
         .expect( "could not make a canvas" );
 
-    canvas.set_draw_color( Color::RGB( 0, 255, 255 ) );
+    canvas.set_draw_color( Color::RGB( GRAD_R_TOP as u8, GRAD_G_TOP as u8, GRAD_B_TOP as u8 ) );
 
     canvas.clear();
     canvas.present();
